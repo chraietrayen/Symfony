@@ -1,0 +1,12 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block body %}
+<h1>Lister des livres</h1>
+<a href="{{ path('app_livre_ajouter') }}">Ajouter un livre</a>
+<ul>
+    {% for livre in livres %}
+        <li>{{ livre.Titre }} -- {{ livre.Auteur }} ({{ livre.getDateDePublication|date('Y-m-d') }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+ 

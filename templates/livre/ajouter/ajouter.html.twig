@@ -1,0 +1,11 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block body %}
+<h1>Ajouter un livre</h1>
+<form method="post" action="{{ path('app_livre_ajouter') }}">
+    <input type="text" name="titre" placeholder="Titre" required>
+    <input type="text" name="auteur" placeholder="Auteur" required>
+    <input type="date" name="datePublication" required>
+    <button type="submit">Ajouter</button>
+</form>
+{% endblock %}
